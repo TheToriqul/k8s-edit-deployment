@@ -65,7 +65,7 @@ When a deployment is edited via kubectl, the Kubernetes Deployment Controller or
 
 1. Create the initial deployment:
    ```bash
-   kubectl create deployment my-nginx --image=nginx:latest --replicas=3
+   kubectl create deployment my-nginx --image=nginx:1.28 --replicas=3
    ```
 
 2. Verify deployment status:
