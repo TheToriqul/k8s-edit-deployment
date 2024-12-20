@@ -19,16 +19,13 @@ This project demonstrates advanced Kubernetes deployment management capabilities
 
 ## 🏗️ Project Architecture
 When a deployment is edited via kubectl, the Kubernetes Deployment Controller orchestrates the update process by creating a new ReplicaSet for the updated configuration while gradually scaling down the old ReplicaSet. This controlled transition ensures zero-downtime updates as new pods with the updated specifications are created and old pods are systematically terminated, maintaining the desired application state throughout the process.
-```mermaid
-graph TD
-    A[User/kubectl] -->|1. Edit Deployment| B[Deployment Object]
-    B -->|2. Triggers Update| C[Deployment Controller]
-    C -->|3. Creates/Updates| D[New ReplicaSet]
-    C -->|4. Scales Down| E[Old ReplicaSet]
-    D -->|5. Creates| F[New Pods]
-    F -->|6. Runs| G[Nginx Container]
-    E -->|7. Terminates| H[Old Pods]
-```
+
+<figure >
+  <p align="center">
+      <img src="./architecture.png" alt="project architecture" />
+      <p align="center">Project Architecture</p> 
+  </p>
+</figure>
 
 ## 💻 Technical Stack
 
