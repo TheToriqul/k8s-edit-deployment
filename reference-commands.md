@@ -15,7 +15,7 @@
 ### Creating the Initial Deployment
 ```bash
 # Create a new deployment with Nginx
-kubectl create deployment my-nginx --image=nginx:latest --replicas=3
+kubectl create deployment my-nginx --image=nginx:1.28 --replicas=3
 
 # Verify deployment creation
 kubectl get deployments
